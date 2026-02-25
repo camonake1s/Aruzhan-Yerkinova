@@ -8,6 +8,8 @@ const caloriesResult = document.getElementById('caloriesResult');
 const statusImage = document.getElementById('statusImage');
 const calculateBtn = document.getElementById('calculateBtn');
 const resetBtn = document.getElementById('resetBtn');
+const statusMessage = document.getElementById('statusMessage');
+const interpretation = document.getElementById('interpretation');
 
 calculateBtn.addEventListener('click', function() {
     const distance = parseFloat(distanceInput.value);
@@ -34,12 +36,18 @@ calculateBtn.addEventListener('click', function() {
     resetBtn.style.display = "block";
 
     if (pace < 5) {
+        statusMessage.textContent = "You're a Rocket! ";
+        interpretation.textContent = "Category: Professional / Fast Runner"; 
         statusImage.src = "fast.gif";
         document.body.style.background = "linear-gradient(135deg, #f6d365, #fda085)";
     } else if (pace <= 9) {
+        statusMessage.textContent = "Great job, runner! "; 
+        interpretation.textContent = "Category: Active / Steady Jogger";
         statusImage.src = "normal.png";
         document.body.style.background = "linear-gradient(135deg, #84fab0, #8fd3f4)";
     } else {
+        statusMessage.textContent = "Keep moving, warrior! ";
+        interpretation.textContent = "Category: Recovery / Beginner Walker";
         statusImage.src = "slow.jpg";
         document.body.style.background = "linear-gradient(135deg, #a1c4fd, #c2e9fb)";
     }
@@ -47,7 +55,6 @@ calculateBtn.addEventListener('click', function() {
 
 resetBtn.addEventListener('click', function(e) {
     e.preventDefault();
-
     distanceInput.value = "";
     hoursInput.value = "";
     minutesInput.value = "";
@@ -56,9 +63,10 @@ resetBtn.addEventListener('click', function(e) {
     paceResult.textContent = "Pace: --";
     speedResult.textContent = "Speed: --";
     caloriesResult.textContent = "Calories: --";
+    statusMessage.textContent = ""; 
+    interpretation.textContent = ""; 
 
     statusImage.style.display = "none";
     resetBtn.style.display = "none";
-
     document.body.style.background = "linear-gradient(135deg, #85f0ed 0%, #e7b0c1 100%)";
 });
