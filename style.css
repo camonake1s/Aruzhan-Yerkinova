@@ -1,16 +1,93 @@
-/* Starter CSS to edit */
 body {
-    font-family: Arial, sans-serif;
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #85f0ed 0%, #e7b0c1 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    transition: 0.5s ease;
 }
 
-h1 {
+.calculator-card {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 20px;
+    border-radius: 25px;
+    width: 360px;
     text-align: center;
 }
 
-#output {
-    margin-top: 20px;
+
+label {
+    display: block;
+    text-align: left;
+    width: 90%;
+    margin: 10px auto 5px;
     font-weight: bold;
+    font-size: 13px;
+    color: #333;
+}
+
+.time-inputs {
+    display: flex;
+    width: 90%;
+    margin: 0 auto 10px;
+    gap: 10px;
+}
+
+input {
+    width: 90%;
+    margin: 0 auto 10px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+    box-sizing: border-box;
+    
+}
+
+.time-inputs input { width: 48%; margin: 0; }
+
+button {
+    width: 90%;
+    padding: 15px;
+    background-color: #1bbb9e;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 15px auto;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #16a085;
+    transform: translateY(-2px);
+}
+
+#output {
+    width: 90%;
+    margin: 15px auto;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+}
+
+#output p { margin: 10px 0; font-weight: 400; text-align: left; font-size: 14px;}
+
+#resetBtn {
+    
+    margin-top: 10px;
+    font-size: 12px;
+    color: #cb8920;
+    text-decoration: underline;
+}
+
+#statusImage {
+    width: 100px;
+    margin: 10px auto;
+    border-radius: 10px;
 }
