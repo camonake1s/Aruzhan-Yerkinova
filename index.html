@@ -23,15 +23,20 @@
         </div>
 
         <label>Weight (kg):</label>
-        <input type="number" id="weight" placeholder="Your weight">
+        <input type="number" id="weight" placeholder="Your weight" min="0">
 
         <button id="calculateBtn">Calculate</button>
     </div>
 
     <div id="output">
+        <h3 id="statusMessage" style="margin-top: 0; color: #333;"></h3> 
+        
         <p id="paceResult">Pace: --</p>
         <p id="speedResult">Speed: --</p>
         <p id="caloriesResult">Calories: --</p>
+        
+        <p id="interpretation" style="font-weight: bold; border-top: 1px solid rgba(0,0,0,0.1); padding-top: 10px;"></p>
+
         <a href="#" id="resetBtn" style="display: none;">Reset all data</a>
     </div>
 
