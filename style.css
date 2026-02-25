@@ -19,6 +19,16 @@ body {
     text-align: center;
 }
 
+h1{ 
+    margin: 30px auto 2px;
+
+}
+
+h5{
+    font-weight: 100;
+    color: #949191;
+    margin: 0 auto 40px;
+}
 
 label {
     display: block;
