@@ -21,7 +21,7 @@ List and explanation of all inputs I used.
 | Weight | kg | Body weight of the user |
 
 **Explain in words:**
-I chose these inputs because they are the basic things you need to calculate running pace and calories. Distance and time give the pace and speed, and weight is needed to estimate calories; the more you weigh, the more energy you use.
+I chose these inputs because they are the basic things you need to calculate running pace and calories. Distance and time give the pace and speed, and weight is needed to estimate calories, the more you weigh, the more energy you use.
 
 ---
 
