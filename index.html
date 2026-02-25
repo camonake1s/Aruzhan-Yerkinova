@@ -1,20 +1,42 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Personal Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Personal Calculator</h1>
+<div class="calculator-card">
+    <h1>RunTrack</h1>
 
-<form id="calculatorForm">
-    <!-- Add input fields here -->
-</form>
+    <div id="calculatorForm">
+        <label>Distance (km):</label>
+        <input type="number" id="distance" placeholder="Distance in km" min="0">
 
-<div id="output">
-    <!-- Results will be displayed here -->
+        <label>Time (Hours & Minutes):</label>
+        <div class="time-inputs">
+            <input type="number" id="hours" placeholder="Hrs" min="0">
+            <input type="number" id="minutes" placeholder="Min" min="0" max="59">
+        </div>
+
+        <label>Weight (kg):</label>
+        <input type="number" id="weight" placeholder="Your weight">
+
+        <button id="calculateBtn">Calculate</button>
+    </div>
+
+    <div id="output">
+        <p id="paceResult">Pace: --</p>
+        <p id="speedResult">Speed: --</p>
+        <p id="caloriesResult">Calories: --</p>
+        <a href="#" id="resetBtn" style="display: none;">Reset all data</a>
+    </div>
+
+    <div id="visualResponse">
+        <img id="statusImage" src="" style="display:none;">
+    </div>
 </div>
 
 <script src="script.js"></script>
